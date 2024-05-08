@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Awareness Website</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mental Awareness Website</h1>
+    <p>Empowering Mental Health Awareness</p>
+</header>
+
+<nav>
+    <a href="#information">Information</a> |
+    <a href="#resources">Resources</a> |
+    <a href="#contact">Contact</a> |
+    <a href="#awareness">Awareness</a>
+</nav>
+
+<section id="information">
+    <h2>Information</h2>
+    <p>This section provides information about mental health awareness and tips for improving mental well-being.</p>
+    <div id="tips-carousel">
+        <h3>Mental Health Tips</h3>
+        <div class="carousel">
+            <div class="slide">Tip 1: Practice mindfulness and meditation daily.</div>
+            <div class="slide">Tip 2: Stay physically active to boost your mood.</div>
+            <div class="slide">Tip 3: Reach out to friends and family for support.</div>
+            <!-- Add more tips here -->
+        </div>
+    </div>
+</section>
+
+<section id="resources">
+    <h2>Resources</h2>
+    <p>Explore helpful resources, articles, and links to mental health organizations and support groups.</p>
+    <ul>
+        <li><a href="https://www.nami.org">National Alliance on Mental Illness (NAMI)</a></li>
+        <li><a href="https://www.psychologytoday.com/us">Psychology Today</a></li>
+        <li><a href="https://www.samhsa.gov">Substance Abuse and Mental Health Services Administration (SAMHSA)</a></li>
+        <!-- Add more resource links here -->
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>For inquiries or assistance, please contact us using the form below:</p>
+    <form action="submit_form.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+<section id="awareness">
+    <h2>Awareness Campaigns</h2>
+    <p>Learn more about our ongoing awareness campaigns to promote mental health and well-being.</p>
+    <div class="campaign">
+        <img src="sip1.jpeg" alt="Awareness Campaign in govt school 1">
+        <p>Campaign Description 1</p>
+    </div>
+    <div class="campaign">
+        <img src="sip2.jpeg" alt="Awareness Campaign in govt school 2">
+        <p>Campaign Description 2</p>
+    </div>
+    <!-- Add more campaigns with images and descriptions -->
+</section>
+
+
+<footer>
+    <p>&copy; 2024 Mental Awareness Website</p>
+</footer>
+
+<script>
+    // JavaScript for carousel functionality
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change slide every 2 seconds
+    }
+</script>
+
+</body>
+</html>
